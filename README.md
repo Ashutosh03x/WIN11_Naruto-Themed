@@ -42,6 +42,11 @@
     <img src="./previews/cava_Terminal.png" width="800"/>
     </p>
 
+- __Discord__
+    <p align="center">
+    <img src="./previews/discord.jpg" width="800"/>
+    </p>
+
 ---
 ## ⚙️ Setup Guide
 
