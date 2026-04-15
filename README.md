@@ -45,9 +45,9 @@
 ---
 ## ⚙️ Setup Guide
 
- > Follow this Reo which i use personally:) [HERE](https://github.com/Ashutosh03x/My-ultimate_WIN11_setup)
+ > Follow this Repo to set everything up , This is my personal setup . I always keep updating there:) [HERE](https://github.com/Ashutosh03x/My-ultimate_WIN11_setup)
 ---
 
-🚧 Status
+#### 🚧 Status
 
 This project is still in progress. I will keep improving and adding more configs over time.
