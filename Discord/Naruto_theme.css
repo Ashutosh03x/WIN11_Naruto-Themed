@@ -1,0 +1,165 @@
+/* @name midnight (Shinobi Edition - Naruto) */
+/* @description dark Midnight theme remapped to Naruto chakra palette */
+
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    --font: 'GoMono Nerd Font';
+    --code-font: '';
+    font-weight: 400;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='24' height='24'%3E%3Cpath fill='currentColor' d='M0 0h7v1H6v1H5v1H4v1H3v1H2v1h5v1H0V6h1V5h1V4h1V3h1V2h1V1H0m13 2h5v1h-1v1h-1v1h-1v1h3v1h-5V7h1V6h1V5h1V4h-3m8 5h1v5h1v-1h1v1h-1v1h1v-1h1v1h-1v3h-1v1h-2v1h-1v1h1v-1h2v-1h1v2h-1v1h-2v1h-1v-1h-1v1h-6v-1h-1v-1h-1v-2h1v1h2v1h3v1h1v-1h-1v-1h-3v-1h-4v-4h1v-2h1v-1h1v-1h1v2h1v1h1v-1h1v1h-1v1h2v-2h1v-2h1v-1h1M8 14h2v1H9v4h1v2h1v1h1v1h1v1h4v1h-6v-1H5v-1H4v-5h1v-1h1v-2h2m17 3h1v3h-1v1h-1v1h-1v2h-2v-2h2v-1h1v-1h1m1 0h1v3h-1v1h-2v-1h1v-1h1'%3E%3C/path%3E%3C/svg%3E");
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-subtle);
+    --dms-icon-color-after: var(--white);
+
+    --custom-dms-background: color;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+
+    /* 🔥 Naruto Gradient Core (Akatsuki → Rasengan → Leaf) */
+    --dms-background-color: linear-gradient(
+        70deg,
+        #c0392b,  /* Akatsuki red */
+        #e8600a,  /* Naruto orange */
+        #ff8c2a,  /* flame glow */
+        #4ab8ff,  /* Rasengan blue */
+        #4a7c45   /* Leaf green */
+    );
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+
+    --small-user-panel: on;
+}
+
+/* ========================= */
+/* 🔥 SHINOBI COLOR SYSTEM */
+/* ========================= */
+
+:root {
+    --colors: on;
+
+    /* text */
+    --text-0: #f5e6c8;
+    --text-1: #f5e6c8;
+    --text-2: #c8960a;
+    --text-3: #a08060;
+    --text-4: #7a3000;
+    --text-5: #5c4a3a;
+
+    /* backgrounds (scroll theme) */
+    --bg-1: #2e2618;
+    --bg-2: #231d15;
+    --bg-3: #1a1510;
+    --bg-4: #120e0b;
+
+    --hover: rgba(232, 96, 10, 0.08);
+    --active: rgba(74, 188, 255, 0.12);
+    --active-2: rgba(192, 57, 43, 0.18);
+    --message-hover: rgba(245, 230, 200, 0.05);
+
+    /* accent (Rasengan core system) */
+    --accent-1: #4ab8ff;
+    --accent-2: #ff8c2a;
+    --accent-3: #e8600a;
+    --accent-4: #c8960a;
+    --accent-5: #4a7c45;
+    --accent-new: #4ab8ff;
+
+    /* mentions / replies */
+    --mention: linear-gradient(
+        to right,
+        rgba(232, 96, 10, 0.18),
+        transparent
+    );
+
+    --mention-hover: linear-gradient(
+        to right,
+        rgba(255, 140, 42, 0.25),
+        transparent
+    );
+
+    --reply: linear-gradient(
+        to right,
+        rgba(74, 188, 255, 0.15),
+        transparent
+    );
+
+    --reply-hover: linear-gradient(
+        to right,
+        rgba(74, 188, 255, 0.25),
+        transparent
+    );
+
+    /* status */
+    --online: #4a7c45;
+    --dnd: #c0392b;
+    --idle: #c8960a;
+    --streaming: #4ab8ff;
+    --offline: #5c4a3a;
+
+    /* borders */
+    --border-light: rgba(245, 230, 200, 0.08);
+    --border: rgba(245, 230, 200, 0.15);
+    --border-hover: rgba(74, 188, 255, 0.25);
+    --button-border: rgba(232, 96, 10, 0.18);
+
+    /* base palette remap */
+    --red-1: #c0392b;
+    --red-2: #e8600a;
+    --red-3: #b84800;
+    --red-4: #7a3000;
+    --red-5: #2e2618;
+    --green-1: #4a7c45;
+    --green-2: #6da868;
+    --green-3: #2e5229;
+    --green-4: #4a7c45;
+    --green-5: #231d15;
+
+    --blue-1: #4ab8ff;
+    --blue-2: #1a6fbf;
+    --blue-3: #4ab8ff;
+    --blue-4: #4a7c45;
+    --blue-5: #231d15;
+
+    --yellow-1: #c8960a;
+    --yellow-2: #ff8c2a;
+    --yellow-3: #7a3000;
+    --yellow-4: #a08060;
+    --yellow-5: #231d15;
+
+    --purple-1: #7b5ea7;
+    --purple-2: #4ab8ff;
+    --purple-3: #c0392b;
+    --purple-4: #4a7c45;
+    --purple-5: #1a1510;
+}

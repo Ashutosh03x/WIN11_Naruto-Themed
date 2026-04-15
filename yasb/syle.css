@@ -1,0 +1,571 @@
+/* =============================================
+   NARUTO / SHIPPUDEN YASB THEME
+   Orange flames, Rasengan blue, shinobi green,
+   Akatsuki cloud red, Hidden Leaf accents
+   ============================================= */
+
+:root {
+    /* Core palette */
+    --orange:       #e8600a;   /* Naruto jacket orange */
+    --orange-deep:  #b84800;   /* deep flame */
+    --orange-glow:  #ff8c2a;   /* bright flame highlight */
+    --orange-dim:   #7a3000;   /* dark ember */
+
+    --rasengan:     #4ab8ff;   /* Rasengan blue-white core */
+    --rasengan-deep:#1a6fbf;   /* outer spiral */
+
+    --leaf-green:   #4a7c45;   /* shinobi vest green */
+    --leaf-light:   #6da868;   /* lighter leaf */
+    --leaf-dark:    #2e5229;   /* dark vest shadow */
+
+    --scroll-cream: #1a1510;   /* dark parchment / background */
+    --scroll-mid:   #231d15;   /* surface */
+    --scroll-light: #2e2618;   /* widget surface */
+    --scroll-border:#4a3820;   /* scroll border brown */
+
+    --chakra-gold:  #c8960a;   /* Konoha headband metal */
+    --kunai:        #8a9ba8;   /* kunai/metal gray */
+    --text-main:    #f5e6c8;   /* warm parchment text */
+    --text-muted:   #a08060;   /* faded scroll ink */
+    --akatsuki-red: #c0392b;   /* Akatsuki cloud red */
+    --sage-purple:  #7b5ea7;   /* Sage Mode purple */
+}
+
+* {
+    font-size: 10px;
+    color: var(--text-main);
+    font-weight: 500;
+    font-family: "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── BAR ─────────────────────────────────── */
+.yasb-bar {
+    padding: 0 2px;
+    margin: 0;
+    background-color: rgb(66, 39, 9);
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(232, 96, 10, 0.35);
+    box-shadow: 0 0 12px rgba(232, 96, 10, 0.18);
+}
+
+/* ─── WIDGET BASE ─────────────────────────── */
+.widget {
+    padding: 0 10px;
+    margin: 0;
+}
+.widget .label {
+    padding: 2px 2px 1px 2px;
+}
+.widget .label.alt {
+    padding: 1px 8px 1px 8px;
+}
+.clock-widget .label {
+    padding-left: 8px;
+}
+
+/* ─── POWER MENU WIDGET ───────────────────── */
+.uptime {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-family: "JetBrainsMono NFP";
+}
+.power-menu-widget .label {
+    color: var(--orange-glow);
+    font-size: 24px;
+}
+
+/* ─── POWER MENU POPUP ────────────────────── */
+.power-menu-popup {
+    background-color: rgba(20, 14, 8, 0.82);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid rgba(232, 96, 10, 0.45);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(232, 96, 10, 0.18);
+}
+.power-menu-popup.show {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.96);
+    transition: all 0.25s ease;
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 120px;
+    height: 135px;
+    border-radius: 14px;
+    background-color: rgba(46, 30, 10, 0.55);
+    font-family: "JetBrainsMono NFP";
+    border: 1px solid rgba(232, 96, 10, 0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.power-menu-popup .button:hover {
+    background-color: rgba(232, 96, 10, 0.22);
+    border: 1px solid rgba(232, 96, 10, 0.5);
+    box-shadow: 0 0 14px rgba(232, 96, 10, 0.30);
+    transform: translateY(-4px);
+}
+.power-menu-popup .button:hover .icon {
+    transform: scale(1.12);
+    transition: transform 0.15s ease;
+}
+.power-menu-popup .button .label {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    font-family: "JetBrainsMono NFP";
+}
+
+/* individual power button icon colours */
+.power-menu-popup .button.lock .icon     { color: var(--rasengan); }
+.power-menu-popup .button.signout .icon  { color: var(--chakra-gold); }
+.power-menu-popup .button.sleep .icon    { color: var(--sage-purple); }
+.power-menu-popup .button.restart .icon  { color: var(--leaf-light); }
+.power-menu-popup .button.shutdown .icon { color: var(--akatsuki-red); }
+
+.power-menu-popup .button .icon {
+    font-size: 48px;
+    padding-top: 0px;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+}
+.power-menu-popup .button.cancel {
+    height: 34px !important;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 8px;
+    background-color: rgba(192, 57, 43, 0.10);
+}
+.power-menu-popup .button.cancel .icon {
+    font-size: 18px !important;
+    padding-top: 4px !important;
+    color: var(--akatsuki-red);
+}
+.power-menu-popup .button.cancel .label {
+    margin-bottom: 0px !important;
+    color: var(--akatsuki-red);
+}
+
+/* ─── ICONS ───────────────────────────────── */
+.icon {
+    font-size: 16px;
+}
+
+/* ─── BATTERY ─────────────────────────────── */
+.battery-widget {
+    padding: 0 1px;
+}
+.battery-widget .label {
+    font-size: 9.5px;
+    color: var(--text-main);
+}
+.battery-widget .icon {
+    font-size: 18px;
+    margin-right: 6px;
+}
+.battery-widget .icon.status-critical  { color: var(--akatsuki-red); }
+.battery-widget .label.status-critical { color: var(--akatsuki-red); }
+.battery-widget .icon.status-low       { color: #e07b35; }
+.battery-widget .label.status-low      { color: #e07b35; }
+.battery-widget .icon.status-medium    { color: var(--chakra-gold); }
+.battery-widget .icon.status-high      { color: var(--rasengan); }
+.battery-widget .icon.status-full      { color: var(--leaf-light);
+    text-shadow: 0 0 6px rgba(74, 168, 104, 0.40); }
+.battery-widget .icon.status-charging  { color: var(--orange-glow); }
+.battery-widget .label.status-charging { color: var(--orange-glow); }
+
+/* ─── APPS / START MENU ───────────────────── */
+.apps-widget .label {
+    font-size: 15px;
+    padding: 0 6px;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+.apps-widget .label:hover {
+    color: var(--orange-glow);
+    text-shadow: 0 0 8px rgba(232, 96, 10, 0.40);
+}
+.start-menu .label {
+    font-size: 22px;
+    color: var(--orange);
+    padding: 0 6px;
+    line-height: 1;
+}
+
+/* ─── CAVA ────────────────────────────────── */
+.cava-widget {
+    padding: 0;
+    margin: 0;
+}
+
+/* ─── WALLPAPER ICON ──────────────────────── */
+.wallpapers-widget {
+    padding: 0 5px;
+}
+.wallpapers-widget .icon {
+    font-size: 20px;
+    color: var(--rasengan);
+    transition: all 0.18s ease;
+}
+.wallpapers-widget .icon:hover {
+    color: var(--orange-glow);
+    text-shadow: 0 0 8px rgba(232, 96, 10, 0.40);
+    transform: scale(1.08);
+}
+
+/* ─── WALLPAPER GALLERY POPUP ─────────────── */
+.wallpapers-gallery-window {
+    background: rgba(20, 14, 8, 0.82);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 16px;
+    border: 1px solid rgba(232, 96, 10, 0.30);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.55),
+        0 0 16px rgba(232, 96, 10, 0.15);
+    margin: 3px;
+    padding: 1px;
+}
+.wallpapers-gallery-image {
+    border: 2px solid rgba(232, 96, 10, 0.50);
+    border-radius: 14px;
+    transition: all 0.18s ease;
+}
+.wallpapers-gallery-image:hover {
+    border: 2px solid var(--orange-glow);
+    transform: scale(1.03);
+}
+.wallpapers-gallery-image.focused {
+    border: 2px solid var(--rasengan);
+    box-shadow: 0 0 12px rgba(74, 184, 255, 0.40);
+}
+.wallpapers-gallery-buttons {
+    background: rgba(74, 48, 10, 0.70);
+    color: var(--text-main);
+    border: 1px solid rgba(232, 96, 10, 0.40);
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 0;
+    margin: 12px;
+    width: 500px;
+    transition: all 0.18s ease;
+}
+.wallpapers-gallery-buttons:hover {
+    background: rgba(232, 96, 10, 0.18);
+    border: 1px solid var(--orange-glow);
+    color: var(--orange-glow);
+    box-shadow: 0 0 10px rgba(232, 96, 10, 0.30);
+    transform: translateY(-2px);
+}
+.wallpapers-gallery-buttons:pressed {
+    background: rgba(232, 96, 10, 0.30);
+}
+.wallpapers-gallery-window  { overflow: visible; }
+.wallpapers-gallery-image   { display: block; }
+.wallpapers-widget .widget-container { overflow: visible; }
+
+/* ─── CPU POPUP ───────────────────────────── */
+.cpu-popup {
+    background: rgba(20, 14, 8, 0.72);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+    min-width: 400px;
+    border-radius: 16px;
+    border: 1px solid rgba(232, 96, 10, 0.28);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(232, 96, 10, 0.12);
+    padding-bottom: 6px;
+}
+.cpu-popup .header {
+    background: transparent;
+    padding: 14px 18px;
+}
+.cpu-popup .header .text {
+    font-size: 15px;
+    font-family: "JetBrainsMono NFP";
+    color: var(--text-main);
+    font-weight: 600;
+}
+.cpu-popup .header .pin-btn {
+    font-size: 13px;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+.cpu-popup .header .pin-btn:hover {
+    color: var(--orange-glow);
+    background: rgba(232, 96, 10, 0.12);
+}
+.cpu-popup .header .pin-btn.pinned { color: var(--orange-glow); }
+.cpu-popup .graph-container {
+    background: transparent;
+    min-height: 70px;
+    padding: 4px 10px;
+}
+.cpu-popup .cpu-graph      { color: var(--orange-glow); }
+.cpu-popup .cpu-graph-grid { color: rgba(160, 128, 96, 0.10); }
+.cpu-popup .graph-title {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: "JetBrainsMono NFP";
+    padding: 2px 0px 6px 14px;
+}
+.cpu-popup .stats {
+    background: transparent;
+    padding: 14px;
+}
+.cpu-popup .stats .stat-item {
+    background: rgba(74, 48, 10, 0.35);
+    border: 1px solid rgba(232, 96, 10, 0.30);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 6px;
+    transition: all 0.18s ease;
+}
+.cpu-popup .stats .stat-item:hover {
+    background: rgba(232, 96, 10, 0.14);
+    border: 1px solid rgba(232, 96, 10, 0.45);
+    transform: translateY(-2px);
+}
+.cpu-popup .stats .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: "JetBrainsMono NFP";
+    font-weight: 500;
+    padding: 2px 2px 0px 2px;
+}
+.cpu-popup .stats .stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--orange-glow);
+    font-family: "JetBrainsMono NFP";
+    padding: 2px 2px 6px 2px;
+}
+.cpu-widget {
+    padding: 0 8px;
+}
+.cpu-widget .widget-container .label { font-size: 12px; color: var(--text-main); }
+.cpu-widget .widget-container .icon  { font-size: 14px; color: var(--orange); }
+.cpu-widget .widget-container .label.status-low      { color: var(--leaf-light); }
+.cpu-widget .widget-container .label.status-medium   { color: var(--chakra-gold); }
+.cpu-widget .widget-container .label.status-high     { color: #e07b35; }
+.cpu-widget .widget-container .label.status-critical { color: var(--akatsuki-red); }
+.cpu-widget .progress-circle { margin-right: 6px; }
+.cpu-popup::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(255,160,60,0.04), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+/* ─── CALENDAR ────────────────────────────── */
+.calendar {
+    background: rgba(20, 14, 8, 0.72);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+    border-radius: 16px;
+    border: 1px solid rgba(232, 96, 10, 0.28);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(232, 96, 10, 0.12);
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.calendar .calendar-table::item:hover {
+    background: rgba(232, 96, 10, 0.14);
+    border-radius: 8px;
+}
+.calendar .calendar-table::item:selected {
+    color: #1a0e04;
+    background: rgba(232, 96, 10, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(232, 96, 10, 0.40);
+}
+.calendar .day-label {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--orange);
+}
+.calendar .month-label {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--rasengan);
+}
+.calendar .date-label {
+    font-size: 80px;
+    font-weight: 900;
+    color: var(--text-main);
+    margin-top: -20px;
+}
+.calendar .week-label,
+.calendar .holiday-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.calendar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(255,160,60,0.04), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+/* ─── POMODORO WIDGET ─────────────────────── */
+.pomodoro-widget {
+    padding: 0 6px;
+}
+.pomodoro-widget .icon {
+    font-size: 13px;
+    padding-right: 5px;
+    color: var(--orange);
+}
+.pomodoro-widget .label { font-size: 12px; color: var(--text-main); }
+.pomodoro-widget .label.paused,
+.pomodoro-widget .icon.paused  { color: var(--text-muted); }
+.pomodoro-widget .label.work,
+.pomodoro-widget .icon.work    { color: var(--leaf-light); }
+.pomodoro-widget .label.break,
+.pomodoro-widget .icon.break   { color: var(--rasengan); }
+
+/* ─── POMODORO POPUP ──────────────────────── */
+.pomodoro-menu {
+    background: rgba(20, 14, 8, 0.72);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 16px;
+    border: 1px solid rgba(232, 96, 10, 0.28);
+    padding: 16px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(232, 96, 10, 0.12);
+}
+.pomodoro-menu .header {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    font-family: "JetBrainsMono NFP";
+    margin-bottom: 6px;
+}
+.pomodoro-menu .status {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--orange-glow);
+    font-family: "JetBrainsMono NFP";
+}
+.pomodoro-menu .session {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: "JetBrainsMono NFP";
+    margin-bottom: 10px;
+}
+.pomodoro-menu .button {
+    background: rgba(46, 30, 10, 0.55);
+    border: 1px solid rgba(232, 96, 10, 0.18);
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin: 6px;
+    color: var(--text-main);
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.18s ease;
+}
+.pomodoro-menu .button:hover {
+    background: rgba(232, 96, 10, 0.14);
+    border: 1px solid rgba(232, 96, 10, 0.40);
+    color: var(--orange-glow);
+    transform: translateY(-2px);
+}
+.pomodoro-menu .button:pressed  { background: rgba(232, 96, 10, 0.28); }
+.pomodoro-menu .button.start    { color: var(--leaf-light); }
+.pomodoro-menu .button.pause    { color: var(--chakra-gold); }
+.pomodoro-menu .button.reset    { color: var(--akatsuki-red); }
+.pomodoro-menu::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(255,160,60,0.04), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+/* ─── VOLUME WIDGET ───────────────────────── */
+.volume-widget .icon {
+    color: var(--orange);
+    margin: 0 3px 0 0;
+    transition: all 0.2s ease;
+}
+.volume-widget .icon:hover { color: var(--orange-glow); }
+
+/* ─── AUDIO MENU ──────────────────────────── */
+.audio-menu {
+    background: rgba(20, 14, 8, 0.72);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    min-width: 300px;
+    border-radius: 14px;
+    border: 1px solid rgba(232, 96, 10, 0.28);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(232, 96, 10, 0.12);
+    padding: 8px;
+}
+.audio-menu .audio-container .device {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 6px 10px;
+    margin: 3px 0;
+    font-size: 12px;
+    font-family: "JetBrainsMono NFP";
+    border-radius: 10px;
+    color: var(--text-main);
+    transition: all 0.18s ease;
+}
+.audio-menu .audio-container .device:hover {
+    background: rgba(232, 96, 10, 0.12);
+    border: 1px solid rgba(232, 96, 10, 0.28);
+}
+.audio-menu .audio-container .device.selected {
+    background: rgba(232, 96, 10, 0.22);
+    border: 1px solid rgba(232, 96, 10, 0.45);
+    color: #ffffff;
+}
+.audio-menu::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: linear-gradient(120deg, rgba(255,160,60,0.04), rgba(255,255,255,0));
+    pointer-events: none;
+}
