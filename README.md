@@ -1,3 +1,11 @@
+# __⚠️ NOT UPDATING THIS REPO FROM NOW ON , I SWITCHED TO LINUX LOL⚠️__
+
+## ⚠️ ALSO PKGS LIKE YASB , CAVA etc . have had major updates , which hasn't been updated in this repo , so configs might break ⚠️
+
+
+
+
+
 # __✨ NARUTO (orange) Themed ✨__
 
 - A collection of Windows 11 customizations — focused on a clean, aesthetic, and productive workflow.
